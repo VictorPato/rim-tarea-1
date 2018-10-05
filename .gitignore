@@ -1,3 +1,8 @@
+############ Proyecto
+*.mpg
+*.mp4
+
+############ C++
 # Prerequisites
 *.d
 
