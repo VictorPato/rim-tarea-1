@@ -1,6 +1,8 @@
 ############ Proyecto
 *.mpg
 *.mp4
+.idea
+cmake-build-debug/
 
 ############ C++
 # Prerequisites
