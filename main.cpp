@@ -23,7 +23,7 @@ const int distancia_maxima_de_frames_para_ser_parte_de_comercial = 4;
 const double fps = 29.97;
 const int puntaje_para_ser_un_comercial = 27;
 const int puntaje_inicial = 7;
-const bool WRITE_MODE = true;
+const bool WRITE_MODE = false;
 
 /*
  * --------------------------------
@@ -489,7 +489,6 @@ int main(int argc, char **argv) {
         std::cout << "El video ya fue procesado, se carga desde " << nombreVideo << ".data" << std::endl;
         videoATrabajar = Video(nombreVideo + ".data");
     } else if (does_file_exist(nombreVideo)) {
-        std::cout << "Se extraen caracteristicas desde " << nombreVideo << ".data" << std::endl;
         videoATrabajar = Video(nombreVideo, nombreVideo);
         if (WRITE_MODE) {
             std::cout << "Se escriben las caracteristicas a " << nombreVideo + ".data" << std::endl;
@@ -546,7 +545,7 @@ int main(int argc, char **argv) {
     std::cout << "--------------------\nSe hace detección de apariciones" << std::endl;
     time(&start);
     std::ofstream outputFile;
-    outputFile << std::fixed << std::setprecision(1);
+    outputFile << std::fixed << std::setprecision(2);
     outputFile.open("detecciones.txt");
     std::string nombreSinPath = nombreVideo;
     if (nombreVideo.find('/') != std::string::npos) {
