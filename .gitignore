@@ -3,6 +3,22 @@
 *.mp4
 .idea
 cmake-build-debug/
+*.data
+*.data2
+rim-tarea-1*
+detecciones.txt
+
+############ CMake
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+
 
 ############ C++
 # Prerequisites
